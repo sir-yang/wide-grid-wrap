@@ -1,0 +1,286 @@
+body {
+    background: #f9f9f9;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 3.8rem;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 3.8rem;
+}
+
+/* 搜索框 */
+.home-input-box {
+    position: absolute;
+    left: .3rem;
+    right: .3rem;
+    top: 3.38rem;
+    z-index: 2;
+    height: .8rem;
+    padding: 0 .3rem;
+    background: #fff;
+    -webkit-border-radius: .18rem;
+    -moz-border-radius: .18rem;
+    -o-border-radius: .18rem;
+    border-radius: .18rem;
+    -webkit-box-shadow:0px 0px .18rem 0px rgba(59,177,143,0.15);
+    -moz-box-shadow:0px 0px .18rem 0px rgba(59,177,143,0.15);
+    -o-box-shadow:0px 0px .18rem 0px rgba(59,177,143,0.15);
+    box-shadow:0px 0px .18rem 0px rgba(59,177,143,0.15);
+}
+.home-input-box > img {
+    display: block;
+    width: .24rem;
+    height: .24rem;
+    margin-right: .12rem;
+}
+.home-input-box > input {
+    flex: 1;
+    height: .6rem;
+    border: none;
+    line-height: .6rem;
+    font-size: .24rem;
+    color: #333;
+}
+.input-spacing {
+    width: 100%;
+    height: .58rem;
+}
+
+
+/* 排行榜 */
+.leaderboard-box {
+    background: #fff;
+    padding: 0 .3rem .5rem;
+}
+.home-tit-box {
+    height: 1.4rem;
+    line-height: 1.4rem;
+}
+
+.home-tit-box .tit-lf {
+    font-weight: bold;
+    font-size: .36rem;
+    color: #333;
+}
+.home-tit-box .tit-rt {
+    font-weight: bold;
+    font-size: .24rem;
+    color: #3BB18F;
+}
+
+.rank-head-box > div.center-box {
+    margin: 0 .5rem;
+}
+
+.img-box > img.head {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: .75rem;
+    height: .75rem;
+    margin: auto;
+    border: 1px solid #5aaeef;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    -webkit-box-shadow:0px 0px .22rem 5px rgba(59,177,143,0.18);
+    -moz-box-shadow:0px 0px .22rem 5px rgba(59,177,143,0.18);
+    -o-box-shadow:0px 0px .22rem 5px rgba(59,177,143,0.18);
+    box-shadow:0px 0px .22rem 5px rgba(59,177,143,0.18);
+}
+.img-box .label {
+    position: absolute;
+    bottom: -.15rem;
+    left: 50%;
+    z-index: 5;
+    width: .29rem;
+    height: .29rem;
+    margin-left: -.15rem;
+    background: #5aaeef;
+    text-align: center;
+    line-height: .29rem;
+    font-size: .18rem;
+    color: #fff;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+}
+.center-box {
+    width: 1.88rem;
+    padding-top: .4rem;
+}
+.center-box .rank-by {
+    position: absolute;
+    top: 0;
+    width: 1.88rem;
+    height: 2.49rem;
+}
+.center-box .img-box .rank-icon {
+    position: absolute;
+    top: -.15rem;
+    left: 50%;
+    width: .38rem;
+    height: .29rem;
+    margin-left: -.19rem;
+    z-index: 1;
+}
+.center-box .img-box > img.head {
+    width: 1.06rem;
+    height: 1.06rem;
+    border: 1px solid #ffc000;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+}
+.center-box .img-box .label {
+    background: #ffc000;
+}
+.rt-box .img-box > img.head {
+    border: 1px solid #cecece;
+    -webkit-box-shadow:0px 0px .22rem 5px rgba(182,182,182,0.18);
+    -moz-box-shadow:0px 0px .22rem 5px rgba(182,182,182,0.18);
+    -o-box-shadow:0px 0px .22rem 5px rgba(182,182,182,0.18);
+    box-shadow:0px 0px .22rem 5px rgba(182,182,182,0.18);
+}
+.rt-box .img-box .label {
+    background: #cecece;
+}
+.rank-head-box .name {
+    margin-top: .25rem;
+    margin-bottom: .1rem;
+    font-size: .2rem;
+    color: #333;
+    text-align: center;
+}
+.rank-head-box .val {
+    font-size: .15rem;
+    color: #999;
+    text-align: center;
+}
+
+.rank_text {
+    margin: 0 .8rem;
+    font-size: .24rem;
+    color: #666;
+    line-height: .4rem;
+    text-align: center;
+}
+
+/* 文章推荐 */
+.recommend-item {
+    display: block;
+    width: 2.14rem;
+    padding-top: .2rem;
+    padding-bottom: .5rem;
+}
+.recommend-item > img {
+    display: block;
+    width: 100%;
+    height: 2.04rem;
+    -webkit-border-radius: .1rem;
+    -moz-border-radius: .1rem;
+    -o-border-radius: .1rem;
+    border-radius: .1rem;
+}
+
+/* 专栏推荐 */
+.column-item_box {
+    padding-top: .2rem;
+    padding-bottom: .5rem;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.column-item_box .column-item {
+    display: inline-block;
+    width: 2.56rem;
+    margin-left: .3rem;
+}
+.column-item_box .column-item:last-child {
+    margin-right: .3rem;
+} 
+.column-item > img {
+    display: block;
+    width: 100%;
+    height: 1.64rem;
+    -webkit-border-radius: .1rem .1rem 0 0;
+    -moz-border-radius: .1rem .1rem 0 0;
+    -o-border-radius: .1rem .1rem 0 0;
+    border-radius: .1rem .1rem 0 0;
+}
+
+.column-item .column-item-text {
+    width: 2.54rem;
+    height: .63rem;
+    font-size: .32rem;
+    color: #333;
+    text-align: center;
+    line-height: .63rem;
+    border: 1px solid #E4F7F1;
+    -webkit-border-radius: 0 0 .1rem .1rem;
+    -moz-border-radius: 0 0 .1rem .1rem;
+    -o-border-radius: 0 0 .1rem .1rem;
+    border-radius: 0 0 .1rem .1rem;
+}
+
+/* 冥想专区 */
+.meditation-list .list-item {
+    padding: .2rem .3rem .25rem;
+    border-bottom: 1px solid #e9e9e9;
+}
+.meditation-list .list-item .mx-icon {
+    display: block;
+    width: .72rem;
+    height: .72rem;
+    margin-right: .2rem;
+}
+.meditation-list .right-icon {
+    display: block;
+    width: .14rem;
+    height: .26rem;
+    margin-left: .3rem;
+}
+
+
+/* 最新发布 */
+.publish-list {
+    padding-bottom: .5rem;
+}
+.publish-list .list-item {
+    margin-top: .2rem;
+    padding: .2rem;
+    border:1px solid #F7F4F4;
+    -webkit-box-shadow:0px 0px 18px 0px rgba(192,181,181,0.1);
+    -moz-box-shadow:0px 0px 18px 0px rgba(192,181,181,0.1);
+    -o-box-shadow:0px 0px 18px 0px rgba(192,181,181,0.1);
+    box-shadow:0px 0px 18px 0px rgba(192,181,181,0.1);
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -o-border-radius:10px;
+    border-radius:10px;
+}
+
+.list-item .count-icon {
+    display: block;
+    width: .32rem;
+    height: .32rem;
+    margin-right: .05rem;
+}
+
+.publish-list .list-item .publish-img {
+    display: block;
+    width: 2.14rem;
+    height: 2.04rem;
+    margin-left: .2rem;
+    -webkit-border-radius: .1rem;
+    -moz-border-radius: .1rem;
+    -o-border-radius: .1rem;
+    border-radius: .1rem;
+}

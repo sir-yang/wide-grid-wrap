@@ -1,0 +1,29 @@
+body {
+    background: #f9f9f9;
+}
+
+.exercise-img {
+    display: block;
+    width: 7.3rem;
+    height: 1.82rem;
+    margin: .2rem auto;
+    border: 1px dashed #e9e9e9;
+}
+
+.type-list-box .exercise-item {
+    padding: .2rem .3rem .3rem;
+    background: #fff;
+    border-bottom: 1px solid #e9e9e9;
+}
+.type-list-box .exercise-item .left_icon {
+    display: block;
+    width: .72rem;
+    height: .72rem;
+    margin-right: .2rem;
+}
+.type-list-box .exercise-item .right-icon {
+    display: block;
+    width: .13rem;
+    height: .25rem;
+    margin-left: .2rem;
+}

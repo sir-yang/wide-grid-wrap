@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/weui.css">
+    <link rel="stylesheet" href="../css/jquery-weui.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <script src="../js/setFontSize.js"></script>
+    <title>搜索</title>
+</head>
+<body>
+
+    <div class="page">
+        <div class='search-box flex_start flex_items'>
+            <div class='search-lf flex_start flex_items'>
+                <img src='../images/search_input.png' />
+                <input class='f24 c3' type="search" placeholder='请输入关键词' />
+            </div>
+            <div class='cancel-search' onclick="history.back(-1);">取消</div>
+        </div>
+
+        <div class='plr20'>
+            <div class='history-tit'>热搜词</div>
+            <div class='history-list flex_warp'>
+                <div class='history-item'>食物</div>
+                <div class='history-item'>在线教育</div>
+                <div class='history-item'>AI</div>
+                <div class='history-item'>迷路熊</div>
+                <div class='history-item'>血压</div>
+                <div class='history-item'>用户研究</div>
+            </div>
+            
+            <div class="search-list hide">
+                <div class='list-item flex_start' onclick="self.location.href='articleDetail.html'">
+                    <div class='flex1'>
+                        <div class='f32 c3 clamp2'>粮农组织呼吁农业活动中慎用抗生素...</div>
+                        <div class='f24 c9 mt10 clamp2'>“世界提高抗生素认识周”刚刚过去。联合国粮农组织近日表示，农民可以...</div>
+                        <div class='flex_start mt10'>
+                            <div class='flex_start flex_items'>
+                                <img class='count-icon' src='../images/praise_icon.png' />
+                                <text class='f24 c9'>86</text>
+                            </div>
+                            <div class='flex_start flex_items ml30'>
+                                <img class='count-icon' src='../images/common_icon.png' />
+                                <text class='f24 c9'>6</text>
+                            </div>
+                        </div>
+                    </div>
+                    <img class='publish-img flex_shrink' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547786895858&di=dd470cf6db671fb3cbbed9f68a82d1ca&imgtype=0&src=http%3A%2F%2Fimg1.touxiang.cn%2Fuploads%2F20131014%2F14-091739_115.jpg' />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="../js/jquery-weui.js"></script>
+    <script type="text/javascript">
+        $('.history-list').on('click', 'div', function() {
+            $('.search-box').find('input').val($(this).text());
+            $('.search-list').show();
+            $(this).parent().hide().prev().hide();
+        })
+
+        $('.search-box').find('input').focus(function() {
+            $('.history-list').show().prev().show();
+            $('.search-list').hide();
+        })
+
+    </script>
+</body>
+</html>

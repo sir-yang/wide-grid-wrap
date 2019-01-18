@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/weui.css">
+    <link rel="stylesheet" href="../css/jquery-weui.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/pointsRank.css">
+    <script src="../js/setFontSize.js"></script>
+    <title>积分排行榜</title>
+</head>
+<body>
+
+    <div class="page">
+        <div class="page__bd" style="height: 100%;">
+            <img class='points-bg-image' src='../images/points_by.png' />
+		    <div class='points-top-box'>
+		        <div class='points-tab-box flex_start'>
+		            <div class='tab-item on'>日榜单</div>
+		            <div class='tab-item'>周榜单</div>
+		            <div class='tab-item'>月榜</div>
+		            <div class='tab-item'>总榜</div>
+		        </div>
+		        <!-- 我的排名 -->
+		        <div class='my-rank-box flex_between flex_items'>
+		            <div class='flex1'>
+		                <div class='f32 cf'>周生生</div>
+		                <div class='f24 cf mt15'>第4名 58积分 10分钟</div>
+		            </div>
+		            <button class='points-share'>分享</button>
+		        </div>
+		    </div>
+
+		    <div class='points-rank-list'>
+		        <div class='points-rank-item flex_start flex_items'>
+		            <div class='points-rank-icon'>
+		                <img class='rank-icon' src='../images/rank_1.png' />
+		                <div class='text'>1</div>
+		            </div>
+		            <div class='flex1 flex_start flex_items'>
+		                <img class='user-head flex_shrink' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547786895858&di=dd470cf6db671fb3cbbed9f68a82d1ca&imgtype=0&src=http%3A%2F%2Fimg1.touxiang.cn%2Fuploads%2F20131014%2F14-091739_115.jpg' />
+		                <div>
+		                    <div class='f32 cf mb20'>张三</div>
+		                    <div class='flex_start flex_items'>
+		                        <img class='crown-icon' src='../images/crown_icon.png' />
+		                        <span class='point-num'>150</span>
+		                    </div>
+		                </div>
+		                <div class='use-time'>1小时50分钟</div>
+		            </div>
+		            <img class='right-icon' src='../images/right_icon.png' />
+		        </div>
+		        <div class='points-rank-item flex_start flex_items'>
+		            <div class='points-rank-icon'>
+		                <img class='rank-icon' src='../images/rank_2.png' />
+		                <div class='text'>2</div>
+		            </div>
+		            <div class='flex1 flex_start flex_items'>
+		                <img class='user-head flex_shrink' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547786895858&di=dd470cf6db671fb3cbbed9f68a82d1ca&imgtype=0&src=http%3A%2F%2Fimg1.touxiang.cn%2Fuploads%2F20131014%2F14-091739_115.jpg' />
+		                <div>
+		                    <div class='f32 cf mb20'>张三张三</div>
+		                    <div class='flex_start flex_items'>
+		                        <img class='crown-icon' src='../images/crown_icon.png' />
+		                        <span class='point-num'>150</span>
+		                    </div>
+		                </div>
+		                <div class='use-time'>1小时50分钟</div>
+		            </div>
+		            <img class='right-icon' src='../images/right_icon.png' />
+		        </div>
+		        <div class='points-rank-item flex_start flex_items' onclick="self.location.href='userDetail.html'">
+		            <div class='points-rank-icon'>
+		                <img class='rank-icon' src='../images/rank_3.png' />
+		                <div class='text'>3</div>
+		            </div>
+		            <div class='flex1 flex_start flex_items'>
+		                <img class='user-head flex_shrink' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547786895858&di=dd470cf6db671fb3cbbed9f68a82d1ca&imgtype=0&src=http%3A%2F%2Fimg1.touxiang.cn%2Fuploads%2F20131014%2F14-091739_115.jpg' />
+		                <div>
+		                    <div class='f32 cf mb20'>张三</div>
+		                    <div class='flex_start flex_items'>
+		                        <img class='crown-icon' src='../images/crown_icon.png' />
+		                        <span class='point-num'>150</span>
+		                    </div>
+		                </div>
+		                <div class='use-time'>1小时50分钟</div>
+		            </div>
+		            <img class='right-icon' src='../images/right_icon.png' />
+		        </div>
+		        <div class='points-rank-item flex_start flex_items' onclick="self.location.href='userDetail.html'">
+		            <div class='points-rank-lf'>
+		                <div class='text color'>4</div>
+		            </div>
+		            <div class='flex1 flex_start flex_items'>
+		                <img class='user-head flex_shrink' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547786895858&di=dd470cf6db671fb3cbbed9f68a82d1ca&imgtype=0&src=http%3A%2F%2Fimg1.touxiang.cn%2Fuploads%2F20131014%2F14-091739_115.jpg' />
+		                <div>
+		                    <div class='f32 cf mb20 color'>张三</div>
+		                    <div class='flex_start flex_items'>
+		                        <img class='crown-icon' src='../images/crown_icon.png' />
+		                        <span class='point-num'>150</span>
+		                    </div>
+		                </div>
+		                <div class='use-time'>1小时50分钟</div>
+		            </div>
+		            <img class='right-icon' src='../images/right_icon.png' />
+		        </div>
+		    </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="../js/jquery-weui.js"></script>
+    <script type="text/javascript">
+    	$('.points-tab-box').on('click', 'div', function() {
+    		if (!$(this).hasClass('on')) {
+    			$(this).addClass('on').siblings().removeClass('on');
+    		}
+    	})
+    </script>
+</body>
+</html>
