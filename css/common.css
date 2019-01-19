@@ -435,36 +435,46 @@ body {
 }
 
 .weui-tabbar__item.weui-bar__item--on .weui-tabbar__label {
-	color: #ff533b;
+	color: #3bb18f;
 }
 
 .weui-tabbar .weui-tabbar__item:nth-child(1) .weui-tabbar__icon {
-	background: url('../images/tabbar_home_normal.png') no-repeat;
+	background: url('../images/tabbar/tabbar_home.png') no-repeat;
 	background-position: center;
 	background-size: 100%;
 }
 .weui-tabbar .weui-tabbar__item.weui-bar__item--on:nth-child(1) .weui-tabbar__icon {
-	background: url('../images/tabbar_home_selected.png') no-repeat;
+	background: url('../images/tabbar/tabbar_home_selected.png') no-repeat;
 	background-position: center;
 	background-size: 100%;
 }
 .weui-tabbar .weui-tabbar__item:nth-child(2) .weui-tabbar__icon {
-	background: url('../images/tabbar_shop_normal.png') no-repeat;
+	background: url('../images/tabbar/tabbar_class.png') no-repeat;
 	background-position: center;
 	background-size: 100%;
 }
 .weui-tabbar .weui-tabbar__item.weui-bar__item--on:nth-child(2) .weui-tabbar__icon {
-	background: url('../images/tabbar_shop_selected.png') no-repeat;
+	background: url('../images/tabbar/tabbar_class_selected.png') no-repeat;
 	background-position: center;
 	background-size: 100%;
 }
 .weui-tabbar .weui-tabbar__item:nth-child(3) .weui-tabbar__icon {
-	background: url('../images/tabbar_me_normal.png') no-repeat;
+    background: url('../images/tabbar/tabbar_exercise.png') no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.weui-tabbar .weui-tabbar__item.weui-bar__item--on:nth-child(3) .weui-tabbar__icon {
+    background: url('../images/tabbar/tabbar_exercise_selected.png') no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.weui-tabbar .weui-tabbar__item:nth-child(4) .weui-tabbar__icon {
+	background: url('../images/tabbar/tabbar_me.png') no-repeat;
 	background-position: center;
 	background-size: 100%;
 }
-.weui-tabbar .weui-tabbar__item.weui-bar__item--on:nth-child(3) .weui-tabbar__icon {
-	background: url('../images/tabbar_me_selected.png') no-repeat;
+.weui-tabbar .weui-tabbar__item.weui-bar__item--on:nth-child(4) .weui-tabbar__icon {
+	background: url('../images/tabbar/tabbar_me_selected.png') no-repeat;
 	background-position: center;
 	background-size: 100%;
 }

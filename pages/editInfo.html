@@ -25,21 +25,21 @@
                     <img class='right-icon' src='../images/right_icon.png' />
                 </div>
             </div>
-            <div class='flex_between flex_items'>
+            <div class='flex_between flex_items' onclick="$('.change-name-modal').show().next().show();">
                 <div class='f28 c3'>真实姓名</div>
                 <div class='edit-right flex_start flex_items'>
                     <div class='f28 c3'>周星星</div>
                     <img class='right-icon' src='../images/right_icon.png' />
                 </div>
             </div>
-            <div class='flex_between flex_items'>
+            <div class='flex_between flex_items' onclick="chooseSex(this)">
                 <div class='f28 c3'>性别</div>
                 <div class='edit-right flex_start flex_items'>
-                    <div class='f28 c3'>男</div>
+                    <div class='f28 c3 gender'>男</div>
                     <img class='right-icon' src='../images/right_icon.png' />
                 </div>
             </div>
-            <div class='flex_between flex_items'>
+            <div class='flex_between flex_items' onclick="self.location.href='changePhone.html'">
                 <div class='f28 c3'>手机号</div>
                 <div class='edit-right flex_start flex_items'>
                     <div class='f28 c3'>18628805420</div>
@@ -49,8 +49,54 @@
         </div>
     </div>
 
+    <div class="change-name-modal hide"></div>
+    <div class="change-name-modal-content hide">
+        <div class="f32 c3 txt_center mt20">修改姓名</div>
+        <input type="text" placeholder="请输入真实姓名" />
+        <div class="sure-change-btn">确认修改</div>
+    </div>
+
 
     <script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
     <script type="text/javascript" src="../js/jquery-weui.js"></script>
+    <script type="text/javascript">
+
+        // 选择性别
+        function chooseSex(e) {
+            $.actions({
+                title: '选择性别',
+                actions: [{
+                    text: "男",
+                    onClick: function() {
+                       $(e).find('.gender').html('男');
+                    }
+                },{
+                    text: "女",
+                    onClick: function() {
+                      $(e).find('.gender').html('女');
+                    }
+                }]
+            });
+        }
+
+        // 关闭弹框
+        $('.change-name-modal').click(function() {
+            $(this).hide().next().hide();
+        })
+
+        $('.sure-change-btn').click(function() {
+            var name = $(this).prev().val();
+            if (name == '') {
+                $.toast("真实姓名不能为空", "text");
+                return false;
+            }
+            if (!isNaN(name)) {
+                $.toast("姓名格式错误","text");
+                return false;
+            }
+
+            $(this).parent().hide().prev().hide();
+        })
+    </script>
 </body>
 </html>
