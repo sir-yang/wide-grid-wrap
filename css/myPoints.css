@@ -76,24 +76,3 @@ body {
     padding-bottom: .5rem;
     background: #fff;
 }
-.unlock-points-btn > div {
-    width: 6.7rem;
-    height: .72rem;
-    margin: 0 auto .37rem;
-    line-height: .72rem;
-    text-align: center;
-    font-size: .32rem;
-    color: #F9F9F9;
-    -webkit-border-radius: .36rem;
-    -moz-border-radius: .36rem;
-    -o-border-radius: .36rem;
-    border-radius: .36rem;
-    background:-webkit-linear-gradient(-4deg,rgba(61,208,166,0.94),rgba(25,215,160,0.94));
-    background:-moz-linear-gradient(-4deg,rgba(61,208,166,0.94),rgba(25,215,160,0.94));
-    background:-o-linear-gradient(-4deg,rgba(61,208,166,0.94),rgba(25,215,160,0.94));
-    background:linear-gradient(-4deg,rgba(61,208,166,0.94),rgba(25,215,160,0.94));
-    -webkit-box-shadow: 0px 2px 4px 0px rgba(25,215,160, .3);
-    -moz-box-shadow: 0px 2px 4px 0px rgba(25,215,160, .3);
-    -o-box-shadow: 0px 2px 4px 0px rgba(25,215,160, .3);
-    box-shadow: 0px 2px 4px 0px rgba(25,215,160, .3);
-}

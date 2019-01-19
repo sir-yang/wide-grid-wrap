@@ -224,3 +224,42 @@ body {
     background: transparent;
     outline: none;
 }
+
+.unlock-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6.6rem;
+    height: 4.22rem;
+    background: #fff;
+    border-radius: .1rem;
+    z-index: 500;
+}
+
+.unlock-content img {
+    display: block;
+    width: 100%;
+    height: 1.73rem;
+    margin-bottom: .5rem;
+}
+
+.unlock-content .unlock-btn {
+    display: block;
+    width: 4.2rem;
+    height: .72rem;
+    margin: .6rem auto 0;
+    border-radius: .36rem;
+    background:-webkit-linear-gradient(-4deg,rgba(61,208,166,0.94),rgba(25,215,160,0.94));
+    background:-moz-linear-gradient(-4deg,rgba(61,208,166,0.94),rgba(25,215,160,0.94));
+    background:-o-linear-gradient(-4deg,rgba(61,208,166,0.94),rgba(25,215,160,0.94));
+    background:linear-gradient(-4deg,rgba(61,208,166,0.94),rgba(25,215,160,0.94));
+    -webkit-box-shadow: 0 0 8px 1px rgba(59, 177, 143, .3);
+    -moz-box-shadow: 0 0 8px 1px rgba(59, 177, 143, .3);
+    -o-box-shadow: 0 0 8px 1px rgba(59, 177, 143, .3);
+    box-shadow: 0 0 8px 1px rgba(59, 177, 143, .3);
+    font-size: .32rem;
+    color: #fff;
+    line-height: .72rem;
+    text-align: center;
+}
