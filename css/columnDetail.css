@@ -265,7 +265,7 @@ body {
     transform: translate(-50%, -50%);
     z-index: 500;
     width: 6.9rem;
-    height: 10.07rem;
+    min-height: 6rem;
     max-height: 10.07rem;
     overflow-y: auto;
     background: #fff;
@@ -275,7 +275,11 @@ body {
     border-radius: .1rem;
 }
 .unlock-row-box {
-    padding: .98rem .6rem 0;
+    margin: .8rem .6rem 0;
+    font-size: .26rem;
+    color: #666;
+    max-height: 4.7rem;
+    overflow-y: auto;
 }
 .unlock-modal-content .modal-close {
     position: absolute;
@@ -284,10 +288,24 @@ body {
     width: .44rem;
     height: .44rem;
 }
-.unlock-modal-content .article-title {
-    font-size: .32rem;
-    color: #333;
+
+.column-img-box {
+    position: absolute;
+    left: .6rem;
+    right: .6rem;
+    bottom: 1.4rem;
+    display: block;
+    height: 2.85rem;
+    border-radius: .1rem;
 }
+
+.column-img-box img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: .1rem;
+}
+
 .unlock-modal-content .sure-unlock-btn {
     position: absolute;
     left: 0;
