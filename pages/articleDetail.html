@@ -107,12 +107,19 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="focusComment">
+                <div class="flex_start">
+                    <input type="text" class="flex1 commentIpt" placeholder="输入评论内容">
+                    <button type="button" class="submitComment">提交</button>
+                </div>
+            </div>
 
             <!-- 底部悬浮 -->
             <div class='footer-spacing'></div>
             <div class='detail-footer-box flex_start flex_items'>
                 <img class='left-icon flex_shrink' src='../images/left_icon.png' />
-                <input type='text' placeholder='说点什么......' />
+                <input type='text' onclick="clickComment(this)" readonly placeholder='说点什么......' />
                 <div class='footer-right flex_start flex_items'>
                     <div class='common-box'>
                         <img src='../images/detail_common_icon.png' />
@@ -142,8 +149,8 @@
 
 
     <!-- 首页进入时判断 -->
-    <div class='tankuang'></div>
-    <div class="unlock-content">
+    <div class='tankuang hide'></div>
+    <div class="unlock-content hide">
         <img src="../images/unlock_bg.png" alt="">
         <!-- <div class="f32 c3 txt_center">收费专栏</div> -->
         <div class="f32 c3 txt_center">积分未达到 <span class="cff5">还差354分</span></div>
@@ -152,5 +159,21 @@
 
     <script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
     <script type="text/javascript" src="../js/jquery-weui.js"></script>
+    <script>
+        function clickComment(e) {
+            $('.focusComment').show().find('input').focus();
+            $(e).parent().hide().prev().hide();
+        }
+
+        // 评论
+        $('.submitComment').click(function() {
+            if ($('.focusComment').find('input').val() == "") {
+                $.toast("请输入评论内容", "text");
+                return false;
+            }
+            $('.focusComment').hide().find('input').val("");
+            $('.detail-footer-box').show().prev().show();
+        })
+    </script>
 </body>
 </html>
