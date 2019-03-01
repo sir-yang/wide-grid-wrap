@@ -24,23 +24,39 @@
                 <div class='audio-modal-box hide'>
                     <div class='text'>冬天的衣服被子放久了有臭味？这些方法比什么都管用</div>
                     <div class='flex_start flex_items mt10'>
-                        <div class='time ml30'>00:06</div>
+                        <div class='time ml30 current'>00:00</div>
                         <progress class='flex1' value="22" max="100" backgroundColor="#C3C3C3" activeColor="#737373"></progress>
-                        <div class='time mr30'>03:19</div>
+                        <div class='time mr30 duration'>03:19</div>
                     </div>
+                </div>
+
+                <!-- 视频  播放后视频组件才显示 -->
+                <video id="video" class="video-controls hide" src="../images/video.mp4" controls="controls"></video>
+                <div class="video-modal-box hide">
+                    <img src="../images/play_video_icon.png" onclick="playPauseVideo(this)" alt="">
                 </div>
             </div>
             <!-- 视频 -->
-            <div class='flex_start tit-down-box'>
+            <div class='flex_start tit-down-box hide'>
                 <div class='f32 c3'>冬天的衣服被子放久了有臭味？这些方法比什么都管用</div>
                 <div class='down-load-box'>
                     <img class='down-load flex_shrink' src='../images/downLoad_icon.png' />
                 </div>
             </div>
+
             <!-- 音频 -->
             <div class='audio-icon-box hide'>
-                <img src='../images/pay_audio_icon.png' />
-                <!-- <img src='../images/pause_audio_icon.png' /> -->
+                <!-- 音频组件一直隐藏 -->
+                <div class="hide">
+                    <audio id="audio" src="../images/audio.mp3"></audio>
+                </div>
+
+                <img onclick="playPauseAudio(this)" src='../images/pay_audio_icon.png' />
+            </div>
+            
+            <!-- 图文 -->
+            <div class='flex_start tit-down-box'>
+                <div class='f32 c3'>冬天的衣服被子放久了有臭味？这些方法比什么都管用</div>
             </div>
 
             <!-- 文本内容 -->
@@ -59,5 +75,79 @@
 
     <script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
     <script type="text/javascript" src="../js/jquery-weui.js"></script>
+    <script type="text/javascript">
+        /*
+        *视频相关
+        */
+        var myVideo = document.getElementById("video");
+        // 播放/暂停视频事件
+        function playPauseVideo(e) {
+            if (myVideo.paused) {
+                $(e).parent().hide().prev().show();
+                // $('#video').removeClass('hide').next().hide();
+                $('.cover-img').hide();
+                myVideo.play();
+            }
+            else {
+                myVideo.pause(); 
+            }
+        }
+
+        // 监听视频播放结束事件
+        myVideo.onended = function() {
+            console.log('视频播放结束');
+        }
+
+
+        /*
+        *音频相关
+        */
+        var myAudio = document.getElementById("audio");
+        // 获取音频时长
+        if(myAudio != null){
+            var duration;
+            myAudio.load();
+            myAudio.oncanplay = function () {
+                duration = Math.ceil(myAudio.duration);
+                $('.duration').html(getTimes(duration));
+            }
+        }
+        // 播放/暂停音频
+        function playPauseAudio(e) {
+            if (myAudio.paused) {
+                $(e).attr('src', '../images/pause_audio_icon.png');
+                myAudio.play();
+                console.log(myAudio.currentTime);
+            } else {
+                $(e).attr('src', '../images/pay_audio_icon.png');
+                myAudio.pause();
+            }
+        }
+        // 监听音频播放结束
+        myAudio.onended = function() {
+            console.log('播放结束');
+            $('.audio-icon-box').find('img').attr('src', '../images/pay_audio_icon.png');
+            $('.current').html('00:00');
+            $('.audio-modal-box').find('progress').attr('value',0);
+        }
+
+        // 监听当前时间更新
+        myAudio.ontimeupdate = function() {
+            var current = Math.ceil(myAudio.currentTime);
+            $('.current').html(getTimes(current));
+            var value = parseInt(current / Math.ceil(myAudio.duration)*100);
+            $('.audio-modal-box').find('progress').attr('value',value);
+        }
+
+        // 时间转换事件
+        function getTimes(duration) {
+            var m = parseInt(duration/60);
+            var s = duration%60;
+            m = m >= 10 ? m : '0'+m;
+            s = s >= 10 ? s : '0'+s;
+            var times = m + ":" + s;
+            return times;
+        }
+    </script>
 </body>
 </html>
